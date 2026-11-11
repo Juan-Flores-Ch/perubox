@@ -1,0 +1,99 @@
+@import "tailwindcss";
+
+/* ===== Identidad PerúBox: vino andino, kraft, crema y oro ===== */
+@theme {
+  --color-vino-50: #fdf3f3;
+  --color-vino-100: #f9e1e1;
+  --color-vino-200: #f1bcbc;
+  --color-vino-400: #c8414a;
+  --color-vino-500: #b0202c;
+  --color-vino-600: #961b25;
+  --color-vino-700: #7c1620;
+  --color-vino-800: #5e111a;
+  --color-vino-900: #3f0c12;
+  --color-cacao: #3b2116;
+  --color-kraft: #e6c9a1;
+  --color-kraft-light: #f3e3cb;
+  --color-crema: #fbf5ec;
+  --color-oro: #e2a93b;
+  --color-ink: #2a1a14;
+
+  --font-sans: var(--font-jakarta), ui-sans-serif, system-ui, sans-serif;
+  --font-serif: var(--font-fraunces), Georgia, serif;
+  --font-script: var(--font-caveat), cursive;
+
+  --animate-float: float 6s ease-in-out infinite;
+  --animate-marquee: marquee 40s linear infinite;
+  --animate-shine: shine 3.5s ease-in-out infinite;
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0) rotate(-1deg); }
+    50% { transform: translateY(-14px) rotate(1deg); }
+  }
+  @keyframes marquee {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+  }
+  @keyframes shine {
+    0% { background-position: -200% 0; }
+    60%, 100% { background-position: 200% 0; }
+  }
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--color-crema);
+  color: var(--color-ink);
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection { background: var(--color-vino-500); color: white; }
+
+/* Franja textil andina (rombos tipo awayo) */
+.andean-band {
+  background-color: var(--color-vino-600);
+  background-image:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='56' height='28' viewBox='0 0 56 28'%3E%3Cpath d='M28 2 L42 14 L28 26 L14 14Z' fill='%23e2a93b'/%3E%3Cpath d='M28 7 L36 14 L28 21 L20 14Z' fill='%237c1620'/%3E%3Cpath d='M28 11 L31 14 L28 17 L25 14Z' fill='%23fbf5ec'/%3E%3Cpath d='M0 2 L6 2 L0 8Z M56 2 L50 2 L56 8Z M0 26 L6 26 L0 20Z M56 26 L50 26 L56 20Z' fill='%23f3e3cb'/%3E%3C/svg%3E");
+  background-size: 56px 28px;
+  background-repeat: repeat-x;
+  background-position: center;
+}
+
+/* Textura kraft sutil */
+.kraft {
+  background-color: var(--color-kraft);
+  background-image:
+    radial-gradient(rgba(94, 17, 26, .05) 1px, transparent 1px),
+    radial-gradient(rgba(59, 33, 22, .06) 1px, transparent 1px);
+  background-size: 7px 7px, 11px 11px;
+  background-position: 0 0, 3px 5px;
+}
+
+.text-shine {
+  background: linear-gradient(110deg, var(--color-vino-700) 35%, var(--color-oro) 50%, var(--color-vino-700) 65%);
+  background-size: 200% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: var(--animate-shine);
+}
+
+.glass {
+  background: rgba(251, 245, 236, .72);
+  backdrop-filter: blur(14px) saturate(1.4);
+  -webkit-backdrop-filter: blur(14px) saturate(1.4);
+}
+
+.no-scrollbar::-webkit-scrollbar { display: none; }
+.no-scrollbar { scrollbar-width: none; }
+
+@media print {
+  @page { size: A4; margin: 10mm; }
+  .no-print, [data-sonner-toaster] { display: none !important; }
+  body { background: white !important; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; scroll-behavior: auto !important; }
+}
