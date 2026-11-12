@@ -1,3 +1,4 @@
+import BackgroundMusic from "@/components/BackgroundMusic";
 import BoxDrawer from "@/components/BoxDrawer";
 import SetupNotice from "@/components/SetupNotice";
 import SiteFooter from "@/components/SiteFooter";
@@ -11,6 +12,7 @@ export default function SiteLayout({ children }: { children: React.ReactNode }) 
       <SiteFooter />
       <BoxDrawer />
       <SetupNotice />
+      <BackgroundMusic />
     </>
   );
 }
