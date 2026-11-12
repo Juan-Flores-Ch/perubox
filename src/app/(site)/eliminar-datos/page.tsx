@@ -17,7 +17,7 @@ export default function EliminarDatosPage() {
       <h2>Cómo solicitarlo</h2>
       <ul>
         <li>
-          Escribe a <strong>hola@perubox.pe</strong> o por WhatsApp al <strong>+51 987 654 321</strong> con el asunto <em>“Eliminar mis datos”</em>.
+          Escribe a <strong>hola@perubox.pe</strong> o por WhatsApp al <strong>+51 997 534 790</strong> con el asunto <em>“Eliminar mis datos”</em>.
         </li>
         <li>Indica el correo electrónico con el que te registraste o con el que entraste por Google o Facebook.</li>
         <li>Atenderemos tu solicitud en un plazo máximo de 10 días hábiles y te confirmaremos cuando esté hecho.</li>

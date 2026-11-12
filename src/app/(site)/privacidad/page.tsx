@@ -60,7 +60,7 @@ export default function PrivacidadPage() {
 
       <h2>7. Contacto</h2>
       <p>
-        Escríbenos a <strong>hola@perubox.pe</strong> o por WhatsApp al <strong>+51 987 654 321</strong>.
+        Escríbenos a <strong>hola@perubox.pe</strong> o por WhatsApp al <strong>+51 997 534 790</strong>.
       </p>
     </LegalPage>
   );
