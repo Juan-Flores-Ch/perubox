@@ -58,6 +58,10 @@ export default function SiteFooter() {
       <div className="andean-band h-4 opacity-90" />
       <p className="bg-vino-900 py-4 text-center text-xs text-crema/50">
         © {2026} PerúBox · Proyecto universitario · Hecho con 🤍 y mucho ají
+        <span className="mt-1 block sm:ml-2 sm:mt-0 sm:inline">
+          <Link href="/privacidad" className="hover:text-oro">Privacidad</Link> ·{" "}
+          <Link href="/eliminar-datos" className="hover:text-oro">Eliminación de datos</Link>
+        </span>
       </p>
     </footer>
   );
